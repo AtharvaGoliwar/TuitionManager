@@ -32,7 +32,7 @@ async function connectToDB() {
   connectToDB();
 
 
-app.get('/',async (req,res)=>{
+app.get('/getAllInfo',async (req,res)=>{
     try{
         const data = await collection.find().toArray()
         console.log("ok")
