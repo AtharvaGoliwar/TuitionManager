@@ -238,7 +238,7 @@ export default function View() {
   useEffect(() => {
     const getStudentData = async () => {
       try {
-        let res = await axios.get(`${import.meta.env.VITE_URL}/${id}`);
+        let res = await axios.get(`${import.meta.env.VITE_URL}/getInfo/${id}`);
         setUserData(res.data.item);
       } catch (err) {
         console.log(err);

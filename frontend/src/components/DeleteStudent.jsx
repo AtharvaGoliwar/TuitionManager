@@ -32,7 +32,7 @@ export default function DeleteStudent() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${import.meta.env.VITE_URL}/${id}`);
+      await axios.delete(`${import.meta.env.VITE_URL}/deleteStudent/${id}`);
       // Remove the deleted student from the state
       setDataArr((prevData) => prevData.filter((item) => item._id !== id));
       setPopUp(false); // Close the popup
