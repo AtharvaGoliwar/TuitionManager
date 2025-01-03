@@ -4,7 +4,14 @@ const { MongoClient, ObjectId } = require('mongodb')
 const cors = require('cors')
 
 const app = express();
-app.use(cors())
+
+const corsOptions = {
+    origin: 'http://localhost:5174', // Replace with your frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
+    credentials: true, // If you need to send cookies
+  };
+
+app.use(cors(corsOptions))
 app.use(express.json())
 const uri = process.env.URI
 const client = new MongoClient(uri)
