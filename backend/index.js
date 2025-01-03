@@ -11,7 +11,7 @@ const corsOptions = {
     credentials: true, // If you need to send cookies
   };
 
-app.use(cors({origin:process.env.FRONT}))
+app.use(cors({origin:process.env.FRONT, credentials:true}))
 app.use(express.json())
 const uri = process.env.URI
 const client = new MongoClient(uri)
@@ -35,6 +35,7 @@ async function connectToDB() {
 app.get('/',async (req,res)=>{
     try{
         const data = await collection.find().toArray()
+        console.log("ok")
         res.json(data)
     }catch(err){
         console.log(err)
