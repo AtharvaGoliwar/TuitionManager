@@ -31,7 +31,7 @@ export default function Home() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axios.get(`${import.meta.env.VITE_URL}/`);
+        const res = await axios.get(`${import.meta.env.VITE_URL}/getAllInfo`);
         console.log("Fetched data:", res.data);
         setDataArr(res.data);
       } catch (err) {

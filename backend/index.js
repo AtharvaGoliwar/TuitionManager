@@ -5,12 +5,6 @@ const cors = require('cors')
 
 const app = express();
 
-const corsOptions = {
-    origin: process.env.FRONT, // Replace with your frontend URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
-    credentials: true, // If you need to send cookies
-  };
-
 app.use(cors({origin:process.env.FRONT, credentials:true}))
 app.use(express.json())
 const uri = process.env.URI
