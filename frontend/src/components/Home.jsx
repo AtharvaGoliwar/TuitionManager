@@ -31,7 +31,7 @@ export default function Home() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/");
+        const res = await axios.get(`${import.meta.env.VITE_URL}/`);
         console.log("Fetched data:", res.data);
         setDataArr(res.data);
       } catch (err) {
@@ -62,7 +62,7 @@ export default function Home() {
   const handleSubmit = async () => {
     try {
       console.log("Submitting:", { dataArr, selectedDate, stateArr });
-      const res = await axios.put("http://localhost:8080/submit", {
+      const res = await axios.put(`${import.meta.env.VITE_URL}/submit`, {
         data: dataArr,
         selectedDate,
         stateArr,

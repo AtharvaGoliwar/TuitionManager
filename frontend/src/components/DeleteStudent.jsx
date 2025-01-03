@@ -13,7 +13,7 @@ export default function DeleteStudent() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/");
+        const res = await axios.get(`${import.meta.env.VITE_URL}/`);
         console.log("Fetched data:", res.data);
         setDataArr(res.data);
       } catch (err) {
@@ -32,7 +32,7 @@ export default function DeleteStudent() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/deletestudent/${id}`);
+      await axios.delete(`${import.meta.env.VITE_URL}/${id}`);
       // Remove the deleted student from the state
       setDataArr((prevData) => prevData.filter((item) => item._id !== id));
       setPopUp(false); // Close the popup

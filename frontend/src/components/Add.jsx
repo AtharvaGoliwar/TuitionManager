@@ -19,7 +19,7 @@ export default function Add() {
     }
 
     try {
-      let res = await axios.post("http://localhost:8080/addStudent", {
+      let res = await axios.post(`${import.meta.env.VITE_URL}/addStudent`, {
         name,
         date,
       });
