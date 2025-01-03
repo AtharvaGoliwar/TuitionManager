@@ -1,0 +1,88 @@
+/* View Container */
+.view-container {
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Student Name */
+  .student-name {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Selectors */
+  .selectors {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .year-selector,
+  .month-selector {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .year-selector label,
+  .month-selector label {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .year-selector select,
+  .month-selector select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Attendance Table */
+  .attendance-table {
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .attendance-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .attendance-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .attendance-row:last-child {
+    border-bottom: none;
+  }
+  
+  .attendance-date {
+    flex: 1;
+  }
+  
+  .attendance-status {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  .attendance-status.present {
+    color: green;
+  }
+  
+  .attendance-status.absent {
+    color: red;
+  }
+  
